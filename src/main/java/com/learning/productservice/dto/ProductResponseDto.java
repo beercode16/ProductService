@@ -1,6 +1,7 @@
 package com.learning.productservice.dto;
 
 import com.learning.productservice.models.Category;
+import com.learning.productservice.models.Product;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,4 +16,6 @@ public class ProductResponseDto {
     private String imageUrl;
 
     private String category;
+
+
 }

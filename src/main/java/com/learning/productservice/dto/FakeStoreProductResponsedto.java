@@ -2,13 +2,18 @@ package com.learning.productservice.dto;
 
 import com.learning.productservice.models.Category;
 import com.learning.productservice.models.Product;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class FakeStoreProductResponsedto {
-    private Long  id;
+    private long  id;
     private String title;
     private Double price;
-    private String category;
     private String description;
+    private String category;
+
     private String image;
 
     public static Product toProduct(FakeStoreProductResponsedto dto){

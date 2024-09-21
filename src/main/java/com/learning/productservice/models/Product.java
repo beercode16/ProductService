@@ -1,5 +1,6 @@
 package com.learning.productservice.models;
 
+import com.learning.productservice.dto.ProductResponseDto;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,5 +15,18 @@ public class Product {
     private String imageUrl;
 
     private Category category;
+
+
+    public static ProductResponseDto toProductResponse(Product dto){
+        ProductResponseDto product = new ProductResponseDto();
+        product.setId(dto.getId());
+        product.setTitle(dto.getTitle());
+        //product.setCategory();
+        product.setPrice(dto.getPrice());
+
+        product.setCategory(dto.getCategory().toString());
+        return  product;
+
+    }
 
 }
